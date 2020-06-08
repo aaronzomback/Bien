@@ -24,6 +24,6 @@
 @person = {first_name: "aaron", age: 29, shopping: ["eggs"]}
 
 
-# Has with a key equal to a symbol
+# Hash with a key equal to a symbol
 
 @link = { method: :delete }
