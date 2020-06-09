@@ -6,7 +6,14 @@ ruby '2.7.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.2'
 # Use sqlite3 as the database for Active Record
+group :development do
 gem 'sqlite3', '~> 1.4'
+end
+
+group :production do
+  gem 'pg'
+end
+
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
@@ -34,10 +41,13 @@ group :development, :test do
 end
 
 # add in our geocoding
-
 gem 'geocoder'
 
+# make our forms nice and easy
 gem 'simple_form'
+
+# make our filters Active
+gem 'active_link_to'
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
@@ -55,3 +65,5 @@ group :test do
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
 end
+
+ruby '2.7.0'

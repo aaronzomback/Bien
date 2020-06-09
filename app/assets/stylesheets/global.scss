@@ -90,6 +90,10 @@ nav.filters {
     margin: 0 5px 0 0;
     text-decoration: none;
     color: $black;
+
+    &.active{
+      color: $green;
+    }
   }
 
   div, form {
@@ -101,4 +105,14 @@ nav.filters {
     font-size: 14px;
     padding: 4px 5px;
   }
+}
+
+.comment {
+  border-bottom: 2px solid $lightyellow;
+  font-size: 14px;
+}
+
+p.posted {
+  font-size: 10px;
+  color: #999999
 }
