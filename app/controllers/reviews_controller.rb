@@ -7,6 +7,7 @@ def index
 # from the URL ... params
   @price = params[:price]
   @cuisine = params[:cuisine]
+  @location = params[:location]
 
 # start with all reviews
 @reviews = Review.all
@@ -21,6 +22,10 @@ if @cuisine.present?
   @reviews = @reviews.where(cuisine: @cuisine)
 end
 
+# search near location
+if @location.present?
+  @reviews = @reviews.near(@location)
+end
 
 
 end
@@ -90,7 +95,7 @@ end
 
 
   def form_params
-    params.require(:review).permit(:title, :restaurant, :cuisine, :price, :body, :score, :ambiance, :phone_number)
+    params.require(:review).permit(:title, :restaurant, :cuisine, :price, :body, :score, :ambiance, :phone_number, :address)
   end
 
 end
