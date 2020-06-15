@@ -14,6 +14,12 @@ group :production do
   gem 'pg'
 end
 
+# add uploading files
+gem 'carrierwave', '~> 2.0'
+gem 'mini_magick'
+# upload files to aws
+gem 'fog-aws'
+
 gem 'profanity_filter'
 
 # Use Puma as the app server
@@ -67,5 +73,14 @@ group :test do
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
 end
+
+
+
+# add admin panel
+gem 'activeadmin'
+gem 'devise'
+gem 'cancancan'
+gem 'draper'
+gem 'pundit'
 
 ruby '2.7.0'

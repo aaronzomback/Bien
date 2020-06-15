@@ -85,6 +85,9 @@ def edit
 
   if @review.user != @current_user
     redirect_to root_path
+  elsif @review.created_at < 1.hour.ago
+    redirect_to review_path(@review)
+
   end
 end
 
@@ -108,7 +111,7 @@ def update
 end
 
   def form_params
-    params.require(:review).permit(:title, :restaurant, :cuisine, :price, :body, :score, :ambiance, :phone_number, :address)
+    params.require(:review).permit(:title, :restaurant, :cuisine, :price, :body, :score, :ambiance, :phone_number, :address, :photo)
   end
 
 end

@@ -27,6 +27,11 @@
         <% if is_logged_in? %>
 
         <%= @current_user.email %>
+
+        <% if @current_user.is_admin? %>
+        <%= link_to "Admin", admin_root_path %>
+        <% end %>
+
         <%= link_to "Add a review", new_review_path %>
         <%= link_to "Log out", session_path, method: :delete %>
 
@@ -52,7 +57,11 @@
 
 
 
-    <footer>Copyright 2017 Bien Reviews</footer>
+    <footer>
+      Copyright 2017 Bien Reviews
+      <%= link_to "About", about_path  %>
+      <%= link_to "Terms", terms_path %>
+    </footer>
 
   </body>
 </html>
