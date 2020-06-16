@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_15_145630) do
+ActiveRecord::Schema.define(version: 2020_06_15_221406) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -80,6 +80,7 @@ ActiveRecord::Schema.define(version: 2020_06_15_145630) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "is_admin", default: false
+    t.string "avatar"
   end
 
   add_foreign_key "bookmarks", "reviews"

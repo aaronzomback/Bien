@@ -10,6 +10,7 @@ $bodyFont: "Work Sans";
   box-sizing: border-box;
 }
 
+
 body {
   color: $black;
   font-family: $bodyFont;
@@ -115,4 +116,11 @@ nav.filters {
 p.posted {
   font-size: 10px;
   color: #999999
+}
+
+
+.success {
+  background: $green;
+  color: #ffffff;
+  padding: 10px 20px;
 }

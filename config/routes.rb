@@ -9,6 +9,7 @@ end
   resources :users
 
   resource :session
+  resource :account
 
   root "pages#home"
 

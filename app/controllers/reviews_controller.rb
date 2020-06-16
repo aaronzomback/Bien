@@ -48,7 +48,6 @@ def create
 # we want to check if the model can be saved
 # if it can, we go to the homepage again
 # if it can't, we show the new form
-
   if @review.save
     redirect_to root_path
 
@@ -104,6 +103,8 @@ def update
 
       # redirect somewhere new
       redirect_to review_path(@review)
+
+      flash[:success] = "Your review was successfully updated!"
     else
     render "edit"
     end

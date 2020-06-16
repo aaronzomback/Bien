@@ -9,6 +9,7 @@ class CommentsController < ApplicationController
     @comment.user = @current_user
     @comment.save
 
+flash[:success] = "Your comment was saved"
     # go back to our review show page
     redirect_to review_path(@review)
 end
