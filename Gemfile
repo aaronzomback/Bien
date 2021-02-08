@@ -15,7 +15,7 @@ group :production do
 end
 
 # add uploading files
-gem 'carrierwave', '~> 2.0'
+gem 'carrierwave', '~> 2.1'
 gem 'mini_magick'
 # upload files to aws
 gem 'fog-aws'
